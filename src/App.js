@@ -8,11 +8,13 @@ import Paypal from './Pages/Paypal';
 import Home from './Pages/Home';
 
 
+
 function App() {
-  const user = null;
+  const user = "Pepe";
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      
      <Router>
        {
          !user ? (<Login />) : (
@@ -29,7 +31,7 @@ function App() {
            </Switch>
          )
        }
-     </Router>
+      </Router> 
     </div>
   );
 }
@@ -37,7 +39,9 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   root: {
    //backgroundColor: "#111",
-     minHeight: "100vw",
+     
+     minHeight: "100vh",
+      backgroundColor: "#111"
   },
 }));
 

@@ -1,12 +1,11 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react'
-import Header from '../components/Header';
 
-const Home = () => {
+const Banner = () => {
     const classes = useStyles();
     return (
         <div>
-            <Header/>   
+                banner
         </div>
     )
 }
@@ -17,4 +16,4 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default Home
+export default Banner

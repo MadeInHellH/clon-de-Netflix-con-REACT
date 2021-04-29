@@ -20,10 +20,15 @@ material-ui/core, axios, firebase, react-router-dom, react-uuid, styled componen
 
 ### Crear las carpetas de componetes :  Pages
 
--Creamos  la infraestructura basica  de los componentes deque representan una pagina: Home, Login, Profile, Paypal, SignUp.
+-Creamos  la infraestructura basica  de los componentes de que representan una pagina: Home, Login, Profile, Paypal, SignUp.
 
 ## Esttilos  en los componentes  de pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Patron para añadir la infrastructura de estilo a todos los componentes de la pagina:
+Banner, Header, Plans, Rown.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Estilos  en los componentes de la carperta components
+
+-Creamos  la infraestructura basica del resto de componentes.
+
+### Comoenzamos a trabajar el componente Header

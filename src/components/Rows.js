@@ -1,12 +1,11 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react'
-import Header from '../components/Header';
 
-const Home = () => {
+const Rows = () => {
     const classes = useStyles();
     return (
         <div>
-            <Header/>   
+            rows
         </div>
     )
 }
@@ -16,5 +15,4 @@ const useStyles = makeStyles((theme) => ({
      
     },
   }));
-
-export default Home
+export default Rows
