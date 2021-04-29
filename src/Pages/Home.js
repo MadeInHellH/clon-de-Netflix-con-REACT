@@ -6,7 +6,7 @@ const Home = () => {
     const classes = useStyles();
     return (
         <div>
-            <Header/>   
+            <Header/>          
         </div>
     )
 }
