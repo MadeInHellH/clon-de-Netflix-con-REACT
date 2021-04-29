@@ -32,3 +32,11 @@ Banner, Header, Plans, Rown.
 -Creamos  la infraestructura basica del resto de componentes.
 
 ### Comoenzamos a trabajar el componente Header
+
+- Importamos el logo
+- Añdimos al AppBar una clase trasparent condicional. Esta clase se activa si la variable show = true.
+- La variable show se convierte en true, cuando hacemos un scroll vertical de mas de 100px.
+- Para escuchar cuando el usuario hace scroll vertical, añadimos un evenListener al objeto window.
+- El eventListener esta activo una sola vez cada vez que resfrescamos la pagina (useEffect con []).
+- Una vez montado el componente, hay que limpiarlo para que no nos quede colgado el evenListener.
+- Añadimos las rutas  tanto como para el logo como al Avatar.

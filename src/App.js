@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
    
      
      minHeight: "100vh",
-    backgroundColor: "#111"
+    //backgroundColor: "#111"
   },
 }));
 
