@@ -39,4 +39,15 @@ Banner, Header, Plans, Rown.
 - Para escuchar cuando el usuario hace scroll vertical, añadimos un evenListener al objeto window.
 - El eventListener esta activo una sola vez cada vez que resfrescamos la pagina (useEffect con []).
 - Una vez montado el componente, hay que limpiarlo para que no nos quede colgado el evenListener.
-- Añadimos las rutas  tanto como para el logo como al Avatar.
+- Añadimos las rutas tanto como para el logo como al Avatar.
+
+### Comenzamos a trabajar en el Banner
+ 
+ - Hemos  importado un pedazode  imagen como backgroundImage.
+ - En React, tenemos  que acompañar las  background-position con estilos como object-fit, background-size y background-position.
+ - Hemos posicionado el titulo de la peli, unos botones, y la description.
+ - Como la descripcion viene de la API, tenemos que truncarla para asegurarnos de que nos cabe. Para ello, hemos declarado  la funcion truncate.
+ - Hemos añadido un div vacio, que oscurece la imagen hasta fusionarla con el resto del  UI,  que es oscuro. 
+
+
+- "Funciona todo menos el truncate de la (1:50:30) y tampoco cambia  si pongo 60  y no recorta nada en la funcion. Continuo para no clavarme en el lugar.
