@@ -51,3 +51,25 @@ Banner, Header, Plans, Rown.
 
 
 - "Funciona todo menos el truncate de la (1:50:30) y tampoco cambia  si pongo 60  y no recorta nada en la funcion. Continuo para no clavarme en el lugar.
+
+
+### Comenzamos a trabajar en el Login
+
+- Hemos creado un boton con styled-components y le hemos  llamado netflixBotton. Este boton esta totalmente  customizado  y prodemos variar su lomngitud, color y estilos, pasandoles props
+- Styled components para variar los esttilos del  imput o del boton, pero para su posicionamientos, le damos  una clase normal.
+-hemos cread un input personalizado en Style components.  Le hemos llamado NetfflixInput. Como Inputstate era  ya  un componente de material ui, pues lo hemos llamado styled(InputBase). Si hubiera sido un input de base styled.input``. 
+
+
+
+**No puedo importar la imagen del backgroundImage para el banner del login. Lo dejo como esta para continuar con el proyecto. Falta corregir el tamaño de del logo de netflix y la altura del cartel del medio.
+
+### Comenzamos a trabajar en el Profile
+
+- hemos trabajado en la distribucion.
+- <Plans> Texto</plans>`
+ const Plans = ({children}) => { return () }`
+- Pasar props a los styled componets. 
+- En el caso de que el componente no sea binario, P. ej que el tamaño sea pequeño, grande o mediano, entonces lo solucionamos con una funcion o  un switch
+
+
+***Tengo Problemas  con el Header  por que  se queda en la parte izquierda de la patalla como con la Typography h3 de "edit profile" por lo tanto probe sacando  afuera al Header y quedo como esta en el video pero no me funciono hacer lo mismo con el h3 por que todo los  itmes se pegan a la izquierda de la pantalla. Buscar solucion para eso. Tambien tengo Problemas  con el tamaño del boton de premiun.
