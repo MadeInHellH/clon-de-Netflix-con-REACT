@@ -73,3 +73,13 @@ Banner, Header, Plans, Rown.
 
 
 ***Tengo Problemas  con el Header  por que  se queda en la parte izquierda de la patalla como con la Typography h3 de "edit profile" por lo tanto probe sacando  afuera al Header y quedo como esta en el video pero no me funciono hacer lo mismo con el h3 por que todo los  itmes se pegan a la izquierda de la pantalla. Buscar solucion para eso. Tambien tengo Problemas  con el tamaño del boton de premiun.
+
+
+
+### Signup
+
+- Renderizado condicional. Hemos creado  una variable signIn.
+- si la variable es falsa despegamo el formulario.
+
+
+**** Continuo conlos problemas de poner el banner en la pagina signUp. Todo los botones estan  en el lado  izquierdo de la  pagina.  y Me salio chico el boton de subcribirse.

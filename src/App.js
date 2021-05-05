@@ -10,7 +10,7 @@ import Home from './Pages/Home';
 
 
 function App() {
-  const user = "Pepe";
+  const user = null;
   const classes = useStyles();
   return (
     <div className={classes.root}>
