@@ -79,7 +79,39 @@ Banner, Header, Plans, Rown.
 ### Signup
 
 - Renderizado condicional. Hemos creado  una variable signIn.
-- si la variable es falsa despegamo el formulario.
+- Si la variable es falsa despegamo el formulario.
 
 
-**** Continuo conlos problemas de poner el banner en la pagina signUp. Todo los botones estan  en el lado  izquierdo de la  pagina.  y Me salio chico el boton de subcribirse.
+**** Continuo conlos problemas de poner el banner en la pagina signUp. Todo los botones estan  en el lado  izquierdo de la  pagina. Me salio chico el boton de subcribirse. 
+
+### Proceso de registro / SignIn
+
+- Habilitando una cuenta en firebase
+- Inicializando el objeto auth
+- Capturado  los dato tecleados por el  usuario  dentro del formulario
+- Registrando email y password con auth.create....
+- SignIn con auth.signInWithEmail...
+
+***No pude obtener el objeto de firebase pero en firebase quedo registrado
+
+### Redux
+- habilitamos el slicen useSlice para manejar el usuario en el componente que queramos.
+
+### Persitencia
+
+- hemos añadido un "even listener" en app.js
+- Este event listener lo trael obj  el obj auth,
+escucha cada vez que cambia el usuario en firebase.
+- Cada vez que cambia, vuelve a inyectar el usuario en la capa de datos de  userSlice (Redux). De esta manera recordamos que ya estamos dentro aunque resfresquemos la pagina.
+
+**** quedo clavado dentro de un user y no lo puedo desloguiar y no puedo dejarlo como estaba antes de logiar un user.
+
+
+### Requests
+- Vamos a construir el componente Row
+- Hemos habilitados todos los endpoints para accerder a themoviedb, y extraer los distintos objetos con toda la informacion por genero.
+
+### Request al API
+
+- Con useEffect, hacemos llamadas asyncronas  mediante  una funcion,
+a la que hemos llamado fetchData. Esta funcion  devuelve request.result.data, que es  un arra con todas las peliculas y las desplegamos en el UI.

@@ -2,16 +2,28 @@ import { makeStyles, Typography } from '@material-ui/core';
 import React from 'react'
 import { NetflixButton, NetflixInput } from '../styled/styledcomponents';
 import { useState } from 'react';
+import { auth } from '../firebase';
+import { useHistory } from 'react-router';
 
 const SignUp = () => {
     const classes = useStyles();
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
+    const history = useHistory()
 
-    const signIn = () => { }
-
-    const register = () => { 
+    const signIn = (e) => {
         e.preventDefault();
+        auth.signInWithEmailAndPassword(email, password)
+        .then((authUser) => history.push("/"))
+        .catch(err => alert(err.message));
+        
+     }
+
+    const register = (e) => { 
+        e.preventDefault();
+        auth.createUserWithEmailAndPassword(email, password)
+        .then(authUser => history.push("/"))
+        .catch(err=> alert(err.message))
     }
 
 
@@ -23,12 +35,14 @@ const SignUp = () => {
               <form className={classes.form}>
                 <NetflixInput value={ email } 
                 onChange={(e) =>setEmail(e.target.value)}
+                type="email"
                  placeholder="Email" 
                  className={classes.email}/>
 
                 <NetflixInput value={ password } 
                 onChange={(e) =>setPassword(e.target.value)}
-                placeholder="Password "
+                type="password"
+                placeholder="Password"
                 className={classes.password}
                 />
                 <NetflixButton onClick={ signIn }

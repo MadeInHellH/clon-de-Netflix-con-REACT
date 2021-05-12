@@ -1,17 +1,44 @@
-import { Button, makeStyles, Typography } from '@material-ui/core';
-import React from 'react';
+import { AccordionSummary, Button, makeStyles, Typography } from '@material-ui/core';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import HeroBanner from '../images/Banner2020.jpeg';
+import requests from "../Requests";
 
 const Banner = () => {
     const classes = useStyles();
+    const [ movie, setMovie] = useState([]);
 
     const truncate = (string, n) => string?.length > n ? `${string.substr(0, n-1)}...` : string;
 
+    useEffect(() => { 
+         const fetchData = async () => {
+             const request = await axios.get(requests.fetchNetflixOriginals)
+             //tenemos un  array de peliculas en request.data
+             //generamos un numero ramdon entre  0 y la longitud  del array, para  obtener un indice aleatorio
+             const random = Math.floor(Math.random()* request.data.results.length -1)
+             //mostraremos en pantalla request.data.results[random]
+             setMovie(request.data.results[random]);
+             return request;
+         }
+         fetchData();
+         //probar lo que dice en el tiempo del video "5:38:28"  console.log(move) (overview para la descripcion)
+    }, []);
+
+    console.log(movie);
+
     return (
-        <div className={classes.root}>
+        <div className={classes.root} style={{
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            position: "relative",
+            height: "440px",
+            objecFit: "contain",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            color: "#fff",
+        }}>
               <div className={classes.content}>
                   <Typography variant="h2" component="h1">
-                      Movie Title
+                      {movie?.title || movie?.name || movie?.original_name}
                   </Typography>
                  <div className={classes.buttons}>
                   <Button>Play</Button>
@@ -19,7 +46,7 @@ const Banner = () => {
                   </div>
                    <Typography style={{ wordWrap: "break-word" }} variant= "h6" classname={classes.description}>
                        {
-                           truncate("Movie description Movie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionovie description Movie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie descriptionMovie description, 160")
+                           truncate(movie?.overview, 160)
                        }
                    </Typography>
                    <div className={classes.fadeBottom} />
@@ -30,7 +57,6 @@ const Banner = () => {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-     backgroundImage: `url(${HeroBanner})`,
      position: "relative",
      height: "440px",
      objecFit: "contain",
